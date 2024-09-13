@@ -5,7 +5,7 @@
     font-family: arial;
 
 }
-.header{
+.header1{
     background: url(img1.jpg);
     background-size: cover;
     height: 100vh;
@@ -20,4 +20,15 @@ header{
     position: fixed;
     z-index: 99;
     box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
+}
+#chk1{
+    display: none;
+
+}
+i {
+    flex: none;
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
 }
