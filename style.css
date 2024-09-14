@@ -5,10 +5,25 @@
     font-family: arial;
 
 }
-.header{
+body{
     background: url(img1.jpg);
+}
+
+
+h1.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+.logoimg{
+    margin-top: 20px;
+    width: 125px;
+    height: 125px;
+    
+}
+.header1{
+
     background-size: cover;
-    height: 100vh;
+    height: 20vh;
     background-position: center;
 }
 header{
@@ -33,7 +48,6 @@ i{
 header .logo {
     flex: none;
     color: white;
-    margin-left: 50px;
     text-decoration: none;
     font-size:15px ;
 }
@@ -91,5 +105,10 @@ header ul li a:hover{
     header ul{
         width:100%;
 
+    }
+.para1 p{
+        font-weight: bolder;
+        color: blue;
+        font-size: 50px;
     }
  }
