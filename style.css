@@ -6,7 +6,7 @@
 
 }
 .header{
-    background: url(museo.jpg);
+    background: url(img1.jpg);
     background-size: cover;
     height: 100vh;
     background-position: center;
@@ -20,4 +20,76 @@ header{
     position: fixed;
     z-index: 99;
     box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
 }
+#chk1{
+    display: none;
+
+}
+i{
+    color:#fff;
+    cursor: pointer;
+}
+header .logo {
+    flex: none;
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size:15px ;
+}
+header ul{
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+
+}
+ header .menu{
+    font: size 2.5em;
+    display: none;
+
+ }
+ @media(max-width:1000px){
+    header ul{
+        position: fixed;
+        top: 100px;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh -100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center ;
+        transition: right:0.5s linear;
+    }
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+
+    }
+    #chk1:checked ~ ul{
+        right:0;
+    }
+ }
+ @media(max-width:600px){
+    header .logo{
+        font-size: 10px;
+        margin-left: 8px;
+
+    }
+    header ul{
+        width:100%;
+
+    }
+ }
