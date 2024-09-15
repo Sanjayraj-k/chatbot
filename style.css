@@ -34,8 +34,7 @@ header{
     align-items: center;
     position: fixed;
     z-index: 99;
-    box-shadow: 0 0 10px #000;
-    background: rgba(0,0,0,0.5);
+    
 }
 #chk1{
     display: none;
@@ -55,6 +54,7 @@ header ul{
     flex:2;
     display: flex;
     justify-content: space-evenly;
+
 }
 header ul li {
     list-style: none;
@@ -65,6 +65,7 @@ header ul li a{
     font-weight: 600;
     text-transform: uppercase;
     padding: 10px 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 header ul li a:hover{
     border-bottom: 2px solid cadetblue;
