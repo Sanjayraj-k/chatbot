@@ -6,8 +6,24 @@
 
 }
 body{
-    background: url(img1.jpg);
+    background: url(back.jpg);
+    /* Increase brightness */
+    
+    
 }
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path-to-your-image.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(130%); 
+    z-index: -1; 
+  }
 
 
 h1.logo {
@@ -116,11 +132,18 @@ header ul li a:hover{
 
  .para1{
     margin-top: 10%;
-    padding-left: 500px;
-    padding-right: 150px;
     word-spacing: 10px;
     column-gap: 5px;
     line-height: 1.8;
     font-family: Courier, monospace;
 
+ }
+.section1{
+    display: flex;
+}
+.histimg{
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 400px;
+    height: 400px;
  }
