@@ -48,7 +48,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     z-index: 99;
     
 }
@@ -80,8 +79,9 @@ header ul li a{
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 10px 5px;
     font-family: 'Courier New', Courier, monospace;
+    margin-right: 30px;
 }
 header ul li a:hover{
     border-bottom: 2px solid cadetblue;
@@ -170,4 +170,69 @@ header ul li a:hover{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
  }
- 
+ footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 15%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0  auto;
+  }
+  
+  .footer-section {
+    flex-basis: 16%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcb08;
+  }
+  
+  .footer-section p, .footer-section ul {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ffcb08;
+  }
+  
+  .footer-section .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-icons a:hover {
+    color: #ffcb08;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 14px;
+  }
+  
