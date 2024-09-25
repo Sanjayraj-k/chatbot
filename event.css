@@ -1,6 +1,12 @@
+
+
+
+/* Card Image - Increase to full size like navbar */
+
+
 .card {
     display: flex;
-    gap:20%;
+    gap:7%;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -30,11 +36,13 @@
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 2.0); /* Horizontal, Vertical, Blur, Color */
     border-radius: 8px;
 }
-
+.container{
+    width:98%;
+}
 .content {
     background-color: wheat;
     height: 100%;
-    width: 450px;
+    width: 400px;
     visibility: hidden;
     opacity: 0;
     transform: translateX(40px);
