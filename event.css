@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #f4f4f4; /* Light background for the card */
+    background-color: white; /* Light background for the card */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -91,7 +91,10 @@
     opacity: 1;
     transform: translateX(0);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7503a228ddefa0e8bc12b6a01eb387433337f7f4
 footer {
     background-color: #1b1b1b;
     color: #fff;
@@ -102,7 +105,11 @@ footer {
   .footer-container {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     max-width: 1200px;
+=======
+    max-width: 1180px;
+>>>>>>> 7503a228ddefa0e8bc12b6a01eb387433337f7f4
     margin: 0  auto;
   }
   
@@ -157,4 +164,8 @@ footer {
     border-top: 1px solid #333;
     font-size: 14px;
   }
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 7503a228ddefa0e8bc12b6a01eb387433337f7f4

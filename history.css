@@ -55,3 +55,15 @@ p {
     line-height: 1.8; /* Adjusted line height for better readability */
     word-wrap: break-word;
 }
+
+.cont1{
+    display: flex;
+    gap: 30px;
+    border-radius: 10%;
+}
+.cont1 h3{
+    text-align: center;
+}
+.cont1 img{
+    border-radius: 10%;
+}
