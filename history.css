@@ -43,13 +43,13 @@
 h2 {
     font-size: 26px;
     font-weight: bold;
-    color: #4d4d4d;
+    color: gray;
     margin-bottom: 20px;
 }
 
-p {
+.container-fluid p {
     font-size: 25px;
-    color: #555;
+    color:gray;
     margin-bottom: 20px;
     text-align: justify;
     line-height: 1.8; /* Adjusted line height for better readability */
@@ -67,3 +67,71 @@ p {
 .cont1 img{
     border-radius: 10%;
 }
+footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 15%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0  auto;
+  }
+  
+  .footer-section {
+    flex-basis: 16%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcb08;
+  }
+  
+  .footer-section p, .footer-section ul {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ffcb08;
+  }
+  
+  .footer-section .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-icons a:hover {
+    color: #ffcb08;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid white;
+    font-size: 14px;
+  }
+  .footer-section-about h2,p{
+    color: #fff;
+  }
