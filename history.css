@@ -47,15 +47,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-.container-fluid p {
+.container p {
     font-size: 25px;
-    color:gray;
+    color:black;
     margin-bottom: 20px;
     text-align: justify;
     line-height: 1.8; /* Adjusted line height for better readability */
     word-wrap: break-word;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-
 .cont1{
     display: flex;
     gap: 30px;
@@ -63,6 +64,8 @@ h2 {
 }
 .cont1 h3{
     text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
 }
 .cont1 img{
     border-radius: 10%;
