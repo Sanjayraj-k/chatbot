@@ -38,59 +38,151 @@
 /* Card Image - Increase to full size like navbar */
 
 
-.card {
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000;
+  height:9% ;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: orange;
+}
+
+.menu-button {
+  font-size: 1em;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 200; /* Ensure menu button stays above other content */
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0; /* Start hidden */
+  position: fixed; /* Fixed positioning for overlay effect */
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.95); /* Slight transparency for background */
+  overflow-x: hidden;
+  transition: 0.4s; /* Smooth opening and closing transition */
+  padding-top: 20px;
+  z-index: 150; /* Layer above content but below menu button */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight change for hover effect */
+}
+
+.container {
     display: flex;
-    gap:7%;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: white; /* Light background for the card */
-    border-radius: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Slight hover effect */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .image {
-    height: 200px;
-    width: 250px;
-   
-    padding: 15px;
-    border-radius: 50px 10px 10px 15px;
-    
-}
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 2.0); /* Horizontal, Vertical, Blur, Color */
-    border-radius: 8px;
-}
-.container{
-    width:98%;
-}
-.content {
-    background-color: wheat;
-    height: 100%;
-    width: 400px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(40px);
-    transition: all 0.5s ease;
-    font-size: 14px;
-    padding: 20px; /* Padding for better readability */
-    border-radius: 0 20px 20px 0; /* Rounded corners for content */
+    overflow: hidden;
 }
 
-.card:hover .content {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
+.image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
+
+.card:hover .image img {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h2 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.content h2 span {
+    display: block;
+    font-weight: normal;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .image img {
+        height: 150px;
+    }
+}
+
 footer {
     background-color: #1b1b1b;
     color: #fff;

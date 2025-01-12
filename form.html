@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Components Form</title>
+  <style>
+    body {
+      font-family: 'Cursive', 'Georgia', sans-serif;
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+      background-image: url(gettyimages-481686389-612x612.jpg);
+      color: #333;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #444;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size:20px;
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #6a11cb;
+      outline: none;
+      box-shadow: 0 0 6px rgba(106, 17, 203, 0.3);
+    }
+
+    .form-group.inline label {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .form-group.inline input[type="radio"],
+    .form-group.inline input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    .file-upload {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      font-family: 'Cursive', 'Georgia', sans-serif;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+      box-shadow: 0 4px 12px rgba(37, 117, 252, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>All Components Form</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" >
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120">
+      </div>
+
+      <div class="form-group inline">
+        <label>Gender</label>
+        <label><input type="radio" name="gender" value="male" > Male</label>
+        <label><input type="radio" name="gender" value="female" > Female</label>
+        <label><input type="radio" name="gender" value="other" > Other</label>
+      </div>
+
+      <div class="form-group inline">
+        <label>Hobbies</label>
+        <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobbies" value="traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">Select your country</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="india">India</option>
+          <option value="australia">Australia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="file">Upload File</label>
+        <input type="file" id="file" name="file" class="file-upload">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
