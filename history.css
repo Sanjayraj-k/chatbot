@@ -1,35 +1,13 @@
-.navbar {
-    width: 98%; /* Increase the width to near the edge */
-    height: 150px; /* Decrease the height */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-.event-header-image {
-    position: relative;
-    width: 100%;
+
+body {
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
-.event-header-image img {
-    width: 98%; 
-    height: 150px; 
-    object-fit: cover; 
-    margin-left: auto;
-    margin-right: auto;
-    display: block; 
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white;
-    font-size: 3em; 
-    font-weight: bold; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-}
 
 .content {
     width: 70%;
@@ -57,19 +35,86 @@ h2 {
     margin-left: 20px;
     margin-right: 20px;
 }
-.cont1{
-    display: flex;
-    gap: 30px;
-    border-radius: 10%;
+h1 {
+  color: black;
+  font-size: 70px;
+  margin: 20px 0;
+  text-align: center;
 }
-.cont1 h3{
-    text-align: center;
-    font-weight: bolder;
-    font-size: 30px;
+
+.cont1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-.cont1 img{
-    border-radius: 10%;
+
+.img1 {
+  margin: 15px;
+  position: relative;
+  animation: upDown 2s infinite ease-in-out; /* Up-and-down animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  text-align: center; /* Center align content */
+  width: 450px; /* Increased width of images */
+  height: 450px; /* Increased height of images */
+  overflow: hidden; 
+  border-radius:  17%;/* Hide overflow if the image is bigger than the container */
 }
+
+.img1 img {
+  width: 100%; /* Fill the entire width of the container */
+  height: 100%; /* Fill the entire height of the container */
+  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the box */
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Box shadow around image */
+}
+
+.img1 h3 {
+  margin-top: 10px; /* Text directly below image */
+  font-size: 18px; /* Stylish text size */
+  font-family: 'Cursive', 'Georgia', sans-serif; /* Stylish font */
+  font-style: italic;
+  color: #444;
+  background: rgba(255, 255, 255, 0.8); /* Subtle background for text */
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center; /* Text aligned center */
+  width: fit-content; /* Text wraps tightly */
+  margin: 0 auto; /* Center text below image */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Small shadow for text box */
+}
+
+/* Hover effect */
+.img1:hover {
+  transform: translateY(-10px) rotate(5deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Box shadow increases on hover */
+}
+
+.img1:hover img {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Image hover shadow effect */
+}
+
+/* Up-and-down animation keyframes */
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .img1 img {
+    width: 80%; /* Adjust image size for smaller screens */
+  }
+}
+
+
 footer {
     background-color: #1b1b1b;
     color: #fff;
@@ -138,3 +183,167 @@ footer {
   .footer-section-about h2,p{
     color: #fff;
   }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000;
+    height:9% ;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .title h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: orange;
+  }
+  
+  .menu-button {
+    font-size: 1em;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 200; /* Ensure menu button stays above other content */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    height: 100%;
+    width: 0; /* Start hidden */
+    position: fixed; /* Fixed positioning for overlay effect */
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Slight transparency for background */
+    overflow-x: hidden;
+    transition: 0.4s; /* Smooth opening and closing transition */
+    padding-top: 20px;
+    z-index: 150; /* Layer above content but below menu button */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .close-button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight change for hover effect */
+  }
+  .dancing-heading {
+  font-size: 70px; /* Adjust font size */
+  color: black; /* Heading color */
+  font-family: 'Pacifico', 'Courier New', cursive; /* Stylish font family */
+  font-style: italic; /* Italic font style */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for style */
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Add space around the heading */
+  display: inline-flex; /* Keep letters inline but allow animation */
+  gap: 5px; /* Add space between letters */
+}
+
+.dancing-heading span {
+  display: inline-block; /* Needed for animation */
+  animation: dance 2s infinite; /* Apply dance animation */
+  animation-delay: calc(var(--i) * 0.1s); /* Add delay to each letter */
+}
+
+/* Keyframes for dancing animation */
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up */
+  }
+}
+
+/* Assign each span a unique delay */
+.dancing-heading span:nth-child(1) { --i: 1; }
+.dancing-heading span:nth-child(2) { --i: 2; }
+.dancing-heading span:nth-child(3) { --i: 3; }
+.dancing-heading span:nth-child(4) { --i: 4; }
+.dancing-heading span:nth-child(5) { --i: 5; }
+.dancing-heading span:nth-child(6) { --i: 6; }
+.dancing-heading span:nth-child(7) { --i: 7; }
+.dancing-heading span:nth-child(8) { --i: 8; }
+.dancing-heading span:nth-child(9) { --i: 9; }
+.carousel-container {
+  width: 40%; /* Adjust the width as needed for the left side */
+  margin: 20px; /* Add spacing */
+  position: relative; /* Relative for alignment adjustments */
+  float: left; /* Align the carousel to the left side */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Styling the carousel indicators */
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker indicator */
+  border: none;
+  border-radius: 50%;
+  margin: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; /* Highlighted active indicator */
+}
+
+/* Control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  border-radius: 50%;
+}
+
+/* Carousel captions */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .carousel-container {
+      width: 100%; /* Full width on smaller screens */
+      float: none; /* Center align for small screens */
+  }
+}
