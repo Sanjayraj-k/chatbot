@@ -1,11 +1,95 @@
-.navbar {
-    width: 98%; /* Increase the width to near the edge */
-    height: 150px; /* Decrease the height */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+/* General body styles */
+body {
+  font-family: 'Georgia', serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
 }
+.navbar {
+  position: fixed;
+  height: 9%;
+  top: 0;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000;
+  z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: orange;
+}
+
+.menu-button {
+  font-size: 1em;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 200; /* Ensure menu button stays above other content */
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0; /* Start hidden */
+  position: fixed; /* Fixed positioning for overlay effect */
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.95); /* Slight transparency for background */
+  overflow-x: hidden;
+  transition: 0.4s; /* Smooth opening and closing transition */
+  padding-top: 20px;
+  z-index: 150; /* Layer above content but below menu button */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight change for hover effect */
+}
+
 .event-header-image {
     position: relative;
     width: 100%;
@@ -32,13 +116,10 @@
 }
 
 
-
-
-
-/* Card Image - Increase to full size like navbar */
-
-
-
+h1{
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
 
 .navbar {
   display: flex;

@@ -1,44 +1,33 @@
 <?php
+$conn = new mysqli("localhost", "root", "", "musio");
 
-$Name = $_POST['Name'] ?? '';
-$Email = $_POST['Email'] ?? '';
-$Password = $_POST['Password'] ?? '';
-$Mobile = $_POST['Mobile'] ?? '';
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $conn->real_escape_string($_POST['Name']);
+    $email = $conn->real_escape_string($_POST['Email']);
+    $password = $conn->real_escape_string($_POST['Password']);
+    $mobile = $conn->real_escape_string($_POST['Mobile']);
 
-if (!empty($Name) && !empty($Email) && !empty($Password) && !empty($Mobile)) {
-    $host = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "musio";
+    $checkEmailQuery = "SELECT * FROM signup WHERE Email = '$email'";
+    $result = $conn->query($checkEmailQuery);
 
-    $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
-
-    if ($conn->connect_error) {
-        die('Connect Error (' . $conn->connect_errno . ') ' . $conn->connect_error);
+    if ($result->num_rows > 0) {
+        echo "Error: Email already exists!";
     } else {
-        $SELECT = "SELECT Email FROM signup WHERE Email = ? LIMIT 1";
-        $INSERT = "INSERT INTO signup (Name, Email, Password, Mobile) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO signup (Name, Email, Password, Mobile) VALUES ('$name', '$email', '$password', '$mobile')";
 
-        $stmt = $conn->prepare($SELECT);
-        $stmt->bind_param("s", $Email);
-        $stmt->execute();
-        $stmt->bind_result($Email);
-        $stmt->store_result();
-        $rnum = $stmt->num_rows;
-
-        if ($rnum == 0) {
-            $stmt->close();
-            $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("ssss", $Name, $Email, $Password, $Mobile);
-            $stmt->execute();
-            echo "New record inserted successfully";
+        if ($conn->query($sql) === TRUE) {
+            header("Location: login.html");
+            exit;
         } else {
-            echo "Someone already registered using this email";
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
-        $stmt->close();
-        $conn->close();
     }
 } else {
-    echo "All fields are required";
-    die();
+    echo "Invalid access. Please submit the form.";
 }
+
+$conn->close();
+?>
